@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fondo con imagen */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: url('ruta-a-tu-imagen.jpg') center / cover no-repeat;
+    z-index: 1;
+}
+
+/* Capa de color translúcido en la imagen */
+.form-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+/* Encabezado del formulario */
+.form-container h1 {
+    position: relative;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenido debajo del encabezado */
+.form-content {
+    margin-top: 150px; /* Ajuste para la imagen */
+}
+
+/* Elementos del formulario */
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4267B2;
+}
+
+/* Botón de envío */
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #4267B2;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #3B5998;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .form-container::before {
+        height: 100px;
+    }
+
+    .form-container::after {
+        height: 100px;
+    }
+
+    .form-content {
+        margin-top: 120px;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}

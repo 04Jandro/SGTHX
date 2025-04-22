@@ -1,0 +1,168 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4c70e1;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 80px;
+    font-size: 16px; /* Tamaño base del texto */
+    transform: scale(2.5); /* Escala el texto al 150% */
+    transform-origin: center; /* Define el punto de escala */
+    letter-spacing: 3px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.status-section {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;  
+
+}
+
+.status-section .status {
+    font-size: 20px;
+    text-align: left;
+    align-self: left;
+    background-color: #FF9313;
+    padding: 10px;
+    border-radius: 8px; /* Border radius para la caja del nombre */
+
+}
+
+.status-section .role {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    background-color: #28a745; /* Fondo verde para el rol */
+    padding: 10px;
+    border-radius: 8px; /* Border radius para la caja del rol */
+}
+
+
+/* Estilo de los mosaicos */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card button {
+    background-color: #4c70e1;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #3a5bbf;
+}
+
+.card button:active {
+    transform: translateY(2px);
+}
+
+/* Iconos personalizados */
+.card .icon {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 30px 15px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .card .icon {
+        font-size: 40px;
+    }
+}
